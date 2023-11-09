@@ -145,6 +145,10 @@ public class ProjetController implements Initializable {
     private AnchorPane apStatisEtud;
     @FXML
     private AnchorPane apStatisAdmin;
+    @FXML
+    private Button btnConnexion;
+    @FXML
+    private AnchorPane apConnexion;
 
 
     @Override
@@ -244,5 +248,10 @@ public class ProjetController implements Initializable {
     @FXML
     public void btnStatisClicked(Event event) {
         apStatis.toFront();
+    }
+
+    @FXML
+    public void btnConnexionClicked(Event event) {
+        apConnexion.toFront();
     }
 }
