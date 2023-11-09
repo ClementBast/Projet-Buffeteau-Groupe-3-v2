@@ -40,7 +40,7 @@
                   <String fx:value="btnMenu" />
                </styleClass>
             </Button>
-            <Button fx:id="BtnAdmin" mnemonicParsing="false" onMouseClicked="#btnAdminClicked" prefHeight="70.0" prefWidth="135.0" text="Administrateur">
+            <Button fx:id="btnAdmin" mnemonicParsing="false" onMouseClicked="#btnAdminClicked" prefHeight="70.0" prefWidth="135.0" text="Administrateur">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin>
@@ -49,16 +49,25 @@
                   <String fx:value="btnMenu" />
                </styleClass>
             </Button>
+            <Button fx:id="btnStatis" mnemonicParsing="false" onMouseClicked="#btnStatisClicked" prefHeight="70.0" prefWidth="135.0" text="Statistiques">
+               <styleClass>
+                  <String fx:value="boutonCouleur" />
+                  <String fx:value="btnMenu" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
    </left>
    <center>
-      <AnchorPane prefHeight="461.0" prefWidth="557.0" styleClass="ap" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="513.0" prefWidth="606.0" styleClass="ap" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
          <children>
-            <AnchorPane fx:id="apAdmin" prefHeight="478.0" prefWidth="590.0" styleClass="ap">
+            <AnchorPane fx:id="apAdmin" layoutY="-2.0" prefHeight="464.0" prefWidth="598.0" styleClass="ap">
                <children>
                   <Button fx:id="btnMat" layoutX="80.0" layoutY="213.0" mnemonicParsing="false" onMouseClicked="#btnMatClicked" text="Matières" />
                   <Button fx:id="btnSalles" layoutX="85.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#btnSallesClicked" text="Salles" />
@@ -96,9 +105,22 @@
                      </children>
                   </AnchorPane>
                </children></AnchorPane>
-            <AnchorPane fx:id="apEtudiant" prefHeight="479.0" prefWidth="591.0" styleClass="ap">
+            <AnchorPane fx:id="apStatis" layoutY="-3.0" prefHeight="300.0" prefWidth="300.0" styleClass="ap">
                <children>
-                  <Button fx:id="btnValider" layoutX="188.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#btnValiderClicked" text="Valider" />
+                  <AnchorPane fx:id="apStatisEtud" layoutY="163.0" prefHeight="327.0" prefWidth="606.0" styleClass="ap">
+                     <children>
+                        <TreeView layoutX="132.0" layoutY="20.0" prefHeight="290.0" prefWidth="418.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="apStatisAdmin" layoutY="163.0" prefHeight="328.0" prefWidth="602.0" styleClass="ap">
+                     <children>
+                        <TreeView layoutX="134.0" layoutY="22.0" prefHeight="290.0" prefWidth="418.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="apEtudiant" layoutX="3.0" prefHeight="485.0" prefWidth="598.0" styleClass="ap">
+               <children>
                   <Button fx:id="btnDem" layoutX="45.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#btnDemClicked" text="Demandes" />
                   <Button fx:id="btnComp" layoutX="45.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#btnCompClicked" text="Compétences" />
                   <Button fx:id="btnAide" layoutX="45.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#btnAideClicked" text="Mes aides" />
@@ -184,6 +206,7 @@
             <Label layoutX="61.0" layoutY="21.0" text="Votre ID :" />
             <TextField fx:id="txtId" layoutX="185.0" layoutY="17.0" />
             <TextField fx:id="txtMdp" layoutX="185.0" layoutY="67.0" />
+            <Button fx:id="btnValider" layoutX="134.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#btnValiderClicked" prefHeight="27.0" prefWidth="86.0" text="Valider" />
             <Label layoutX="31.0" layoutY="71.0" text="Votre Mot de Passe :" />
          </children>
       </AnchorPane>

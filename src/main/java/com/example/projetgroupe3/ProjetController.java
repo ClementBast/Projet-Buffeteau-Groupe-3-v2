@@ -28,8 +28,6 @@ public class ProjetController implements Initializable {
     @FXML
     private Button btnEtudiant;
     @FXML
-    private Button BtnAdmin;
-    @FXML
     private AnchorPane apAdmin;
     @FXML
     private Button btnMat;
@@ -137,6 +135,16 @@ public class ProjetController implements Initializable {
     private TreeView tvLesAides;
     @FXML
     private Button btnLesAides;
+    @FXML
+    private Button btnAdmin;
+    @FXML
+    private Button btnStatis;
+    @FXML
+    private AnchorPane apStatis;
+    @FXML
+    private AnchorPane apStatisEtud;
+    @FXML
+    private AnchorPane apStatisAdmin;
 
 
     @Override
@@ -231,5 +239,10 @@ public class ProjetController implements Initializable {
     @FXML
     public void btnLesAidesClicked(Event event) {
         apLesAides.toFront();
+    }
+
+    @FXML
+    public void btnStatisClicked(Event event) {
+        apStatis.toFront();
     }
 }
